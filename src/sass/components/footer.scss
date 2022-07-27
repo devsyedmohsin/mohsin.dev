@@ -1,0 +1,23 @@
+.footer {
+    padding: var(--gutter-large) 0;
+    margin-top: var(--gutter-large);
+    border-top: 1px solid lighten(#c2bfbf, 4%);
+    text-align: center;
+
+    &__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: var(--gutter-medium);
+    }
+
+    &__link:not(:last-child) {
+        margin-right: var(--gutter-medium);
+    }
+
+    &__link>img {
+        width: var(--gutter-medium);
+    }
+
+
+}

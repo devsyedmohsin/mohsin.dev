@@ -1,0 +1,319 @@
+---
+title: CSS tips and tricks.
+date: Posted on Apr 10, 2022
+description: CSS tips and tricks
+---
+
+# CSS tips and tricks.
+
+As we are done with [HTML](https://dev.to/devsyedmohsin/html-tips-tricks-that-you-will-love-to-know-27ig) and [JavaScript](https://dev.to/devsyedmohsin/javascript-tips-and-tricks-2mhk) tricks now its time to cover CSS Tips and Tricks 💖✨
+
+### The `print media queries`
+
+You can style the printable version of your sites using print media queries.
+
+```css
+@media print {
+
+  * {
+    background-color: transparent;
+    color: #000 ;
+    box-shadow: none;
+    text-shadow: none;
+  }
+
+}
+
+```
+
+### The `gradient text`
+
+```css
+h1{
+  background-image: linear-gradient(to right, #C6FFDD, #FBD786, #f7797d);
+  background-clip: text;
+  color: transparent;
+}
+```
+
+
+![Text with two colors using css gradient](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8vih7avit1n8jrw34q4x.png)
+
+
+### Improve `media defaults`
+
+When writing css reset add these properties to improve media defaults.
+
+```css
+img, picture, video, svg {
+  max-width: 100%;
+  object-fit: contain;  /* preserve a nice aspect-ratio */
+}
+```
+
+
+### The `column count`
+
+Craft nice column layouts for text elements using column properties.
+
+```css
+p{
+  column-count: 3;
+  column-gap: 5rem;          
+  column-rule: 1px solid salmon; /* border between columns */
+}
+```
+
+![text telling what is short story divided into three column with coral colored border in between the columns](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4orpl46u4fjvqerziyxa.png)
+
+### Centering with `positioning`
+
+In case you don't know grid or flex this is the way to center a div vertically and horizontally.
+
+```css
+div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+```
+
+### The `comma separated list`
+
+This is the code required to craft a comma separated list.
+
+```css
+li:not(:last-child)::after{
+  content: ',';
+}
+```
+
+
+![A comma seprated list with three items ](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/papyrfd80b8ys0fh0lzt.png)
+
+### The `smooth scrolling`
+
+You are just one line away from smooth scrolling.
+
+```css
+ html {
+  scroll-behavior: smooth;
+}
+```
+
+![website scrolling smoothly](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/mxp1vgu4exjct5js8mnc.gif)
+
+### The `hyphens`
+
+Set hyphens property on your text content to make it hyphenated when text wraps across multiple lines.
+
+
+![A paragraph with hyphens for text that wraps across multiple lines](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qwbxb1qqd2mkmqunnxe6.gif)
+
+
+### The `first letter`
+
+Avoid unnecessary spans and use pseudo elements to style your content likewise first letter pseudo element we also have first-line pseudo element.
+
+```css
+ h1::first-letter{
+   color:#ff8A00;
+}
+```
+
+![first letter of text styled diffrently](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nvet1qfqgn9lejcj45s1.png)
+
+### The `accent color`
+
+Instead of using builtin default colors customize your form controls colors using accent color this has builtin color contrast accessibility features.
+
+![checboxe with diffrent colors](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/idkctqdltjr9rx7hc6a2.gif)
+
+### The `Image filled text`
+
+```css
+h1{
+  background-image: url('illustration.webp');
+  background-clip: text;
+  color: transparent;
+}
+```
+
+![text filled with illustration](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wc00b7f84ysbbxysjqo0.png)
+
+### The `placeholder pseudo-element`
+
+Use placeholder pseudo-element to style placeholders.
+
+```css
+::placeholder{
+  font-size:1.5em;
+  letter-spacing:2px;
+  color:green;
+  text-shadow:1px 1px 1px black;
+}
+```
+
+### The `colors animation`
+
+Change elements colors with hue-rotate filter.
+
+```css
+
+button{
+  animation: colors 1s linear infinite;
+}
+
+@keyframes colors {
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+```
+
+![Button with text shop now changing colors](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0ys0lov43gsapiueht95.gif)
+
+### Centering with `margin`
+
+```css
+.parent{
+  display: flex;  /* display: grid; also works */
+}
+
+.child{
+  margin: auto;
+}
+```
+
+
+### The `clamp function`
+
+Use clamp function for responsive and fluid typography.
+
+```css
+h1{
+  font-size: clamp(5.25rem,8vw,8rem);
+}
+```
+
+![font size changing based on scree size](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/l5eyucrd6slppmbygx56.gif)
+
+### The `selection pseudo element`
+
+Set styles on content selection.
+
+```css
+::selection{
+  color:coral;
+}
+```
+
+![text color changing on selection](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4cdn68yxwhko6pzk65g7.gif)
+
+### The `decimal leading zero`
+
+Set list style type to decimal leading zero to append leading zero to your ordered list items.
+
+```css
+li{
+  list-style-type:decimal-leading-zero;
+}
+```
+![ordered list items with appended leading zero before starting number](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3y9aa1men2ps991lh725.png)
+
+### Centering with `flex`
+
+```css
+.parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+```
+
+### The `custom cursors`
+
+```css
+html{
+  cursor:url('no.png'), auto;
+}
+```
+
+![image with custom cursor](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ba8kist57vp6l9spw8w2.gif)
+
+
+### The `caret color`
+
+You can customize your text input cursor color using caret color property.
+
+```css
+input{
+  caret-color:coral;
+}
+```
+![input field with text cursor blinking in custom color defined](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/k3ocfpntdjnn9lcq3w0o.gif)
+
+### The `resize property`
+
+Set resize property to none to avoid the resizing of textarea
+
+```css
+textarea{
+  resize:none;
+}
+
+```
+### The `only child`
+
+Only child pseudo-class selects an element if it is only child of its parent.
+
+```css
+li:only-child{
+  color:lightgrey;
+}
+```
+
+![ordered list with only one list item](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/f6jx7kx1dcqtmg63gja1.png)
+
+### Centering with `grid`
+
+```css
+.parent{
+  display: grid;
+  place-items: center;
+}
+```
+
+
+### The `text indent`
+
+Text indent property allows us to indent the first line of text we can also use negative values.
+
+```css
+p{
+  text-indent:5.275rem;
+}
+```
+
+![A paragraph with first line indented to right ](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5obsghy74nvu1ljm0h9i.png)
+
+### The `list style type`
+
+You can set a emoji as a list style type.
+
+```css
+li{
+  list-style-type:'🟧';
+}
+```
+
+![emoji as a list style type with three list item an orange box emoji](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ij54a5huofg68fkas08v.png)
+
+Hope you enjoyed reading this article! if you have something to say or have any questions feel 💯 free to comment below.
+
+Happy Coding 📕✨

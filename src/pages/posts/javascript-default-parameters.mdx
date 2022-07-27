@@ -1,0 +1,90 @@
+---
+title: JavaScript Default Function Parameters.
+date: Posted on Nov 30, 2021
+description: Javascript ES6 feature | Setting up default parameters for functions.
+---
+
+# JavaScript Default Function Parameters.
+
+In JavaScript when we call a function which expects some data to be passed in if you call that without passing in that data JavaScript will use `undefined.`
+
+
+Let's understand this practically ⚙️
+
+
+
+What the following function does is that it takes a name as an input and console logs it.
+
+
+```js
+function printName(name) {
+  console.log(name);
+}
+```
+
+Now if we call the `printName` function by passing in a name as shown below: 
+
+```js
+printName("frontendenthusiast");  
+```
+We'll get the following output.
+
+```js
+frontendenthusiast
+```
+
+Now lets call the same function without passing anything in
+
+```js
+printName();  
+```
+We will get `undefined` as the output in the console.
+
+```js
+undefined
+```
+
+`undefined` isn't that useful in most situations what if we can use a fallback if no name is passed into the function. Well for that we can use the `||` operator in JavaScript as shown below:
+
+```js
+function printName(name) {
+  name = name || `Anonymous`;
+  console.log(name);
+}
+```
+
+The **Logical OR (||)** operator returns **the very first truthy value** and undefined is a falsy value so in the `printName` function it will return **Anonymous** which is a truthy value.
+
+Now with the above addition of `||` operator if we call the function by passing in no value as shown:
+
+```js
+printName();
+
+```
+We will get `Anonymous` as the output.
+
+```js
+Anonymous
+
+```
+
+In ES6 we have a more compact way of doing the above which is to set up default parameters directly using the assignment operator `=` as shown:
+
+```js
+function printName(name = `Anonymous`) {
+  console.log(name);
+}
+```
+
+this returns default value we set using `=` operator in case no value was passed in.
+
+```js
+function printName(name = `frontendenthusiast`) {
+  console.log(name);
+}
+
+printName(undefined);
+```
+The output of the above function will be `frontendenthusiast`
+
+`Happy coding! 🥰`

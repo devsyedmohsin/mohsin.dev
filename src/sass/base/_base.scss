@@ -1,0 +1,131 @@
+// VARIABLES----------------------------------
+
+:root {
+    --color-body: #f3efef;
+    --color-text: #444;
+    --color-headlines: #222;
+    --color-brand: #ffd5d5;
+    --color-brand-dark:maroon ;
+
+    --h1: 5.9rem;
+    --h2: 4.745rem;
+    --h3: 3rem;
+
+    --font: 'Jost', sans-serif;
+    --font-small: 2rem;
+
+    --gutter-x-huge: 15rem;
+    --gutter-huge: 12rem;
+    --gutter-x-large: 8rem;
+    --gutter-large: 6rem;
+    --gutter-medium: 4rem;
+    --gutter-normal: 3rem;
+    --gutter-small: 2rem;
+    --gutter-x-small: 1rem;
+    --micro: .6rem;
+}
+
+// GLOBAL STYLES------------------------------
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    @media (max-width:1145px) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: var(--font);
+    font-size: var(--font-small);
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--color-body);
+    color: var(--color-text);
+}
+
+picture,
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+
+// UTILITIES-----------------------------------
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+// ROW-----------------------------------------
+
+.row {
+    max-width: 1160px;
+    margin: auto;
+
+    @media (max-width:1245px) {
+        padding: 0 var(--gutter-small);
+    }
+
+    @media (max-width:1145px) {
+        padding: 0 var(--gutter-medium);
+    }
+
+    @media (max-width:575px) {
+        padding: var(--gutter-small);
+    }
+}
+
+
+// TYPOGRAPHY----------------------------------
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-headlines);
+}
+
+.h1 {
+    font-size: var(--h1);
+
+    @media (max-width:575px) {
+        font-size: 4.75rem;
+    }
+}
+
+.h2 {
+    font-size: var(--h2);
+
+    @media (max-width:475px) {
+        font-size: 3.45rem;
+    }
+}
+
+.h3 {
+    font-size: var(--h3);
+}

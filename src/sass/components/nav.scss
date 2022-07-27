@@ -1,0 +1,17 @@
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: var(--gutter-medium) 0;
+
+
+  &__link:link,
+  &__link:visited {
+    font-size: var(--font-small);
+    color: var(--color-headlines);
+  }
+
+  &__link:not(:last-child){
+      margin-right: var(--gutter-small);
+  }
+
+}

@@ -1,0 +1,159 @@
+---
+title: JavaScript tips and tricks.
+date:  Posted on Feb 1, 2022
+description: Javascript tips and tricks
+---
+
+# JavaScript tips and tricks.
+
+### The `!! operator`
+
+To check either a value is truthy or falsey use `!! operator` you can call this double not or not not operator you can also go with Boolean function here.
+
+```js
+console.log(!! 0)             // output: false
+console.log(!! 1)            // output: true
+
+console.log(Boolean(1))     // output: true
+console.log(Boolean(0))    // output: false
+```
+
+### Convert `string → number`
+
+Convert string into a number
+
+```js
+const string = '101'
+
+console.log(+string)          // output: 101
+console.log(Number(string))   // output: 101
+```
+
+### The `reverse method`
+
+Use reverse method to reverse the order of array items notice  that reverse method mutates the original array.
+
+```js
+const numbers = ['1', '2', '3']
+
+console.log(numbers.reverse())   // output: [ "3", "2", "1" ]
+```
+### The `Math.min & max`
+
+Find minimum or maximum values from an array using Math.min & Math.max function.
+
+```js
+const numbers = [1, 2 ,3, 4, 5]
+
+console.log(Math.min(...numbers)) // output: 1
+
+console.log(Math.max(...numbers)) // output: 5
+```
+
+### Merge `Arrays`
+
+Use spread operator to merge arrays.
+
+```js
+const fruits = ['🍎', '🍌']
+
+const vegetables = ['🥔', '🥕']
+
+const food = [...fruits, ...vegetables]
+
+console.log(food) // output: [ "🍎", "🍌" , "🥔", "🥕" ]
+```
+
+### The `falsey values`
+
+In javascript there are nine falsey values.
+
+```js
+undefined , null , NaN , 0 , 0n (BigInt 0), -0 ""(empty string),false,document.all
+```
+
+
+### The `ternary operator`
+
+Ternary operator allows you to write if...else statement in a more compact.
+
+```js
+let number = 1
+
+if (number == 1) {
+  console.log('number is one')
+} else {
+  console.log('number is not one')
+}
+
+// Syntax: condition ? exprIfTrue : exprIfFalse  (MDN)
+
+console.log(number === 1 ? "number is one" : "number is not one");
+
+```
+
+### Remove `duplicates from array`
+
+```js
+const fruits = ['🍎', '🍊', '🍎', '🍊']
+
+// Method 1:
+const filteredFruits = Array.from(new Set(fruits))
+console.log(filteredFruits) // output: Array [ "🍎", "🍊" ]
+
+// Method 2:
+const filteredFruits = [...new Set(fruits)]  
+console.log(filteredFruits) // output: Array [ "🍎", "🍊" ]
+```
+
+### The `map method`
+
+Try using map method if you want to manipulate array items map method executes the given function on each element of array and return a new array based on the original array
+
+```js
+const numbers = [1, 2, 3, 4, 5]
+
+const mapedNumbers = numbers.map(element => element + 1) 
+
+console.log(mapedNumbers) // output: [2, 3, 4, 5, 6]
+```
+ 
+
+### The `includes method`
+
+To check that an array contains a certain value or not use includes method.
+
+```js
+const hearts = ['🧡', '💙', '🤍']
+
+console.log(hearts.includes('🧡'))  // output: true
+
+console.log(hearts.includes('❤️'))  // output: false
+```
+
+### The `filter method`
+
+filter arrays based on conditions filter method takes a function as an argument and executes that function on each element of array and returns new array.
+
+```js
+const numbers = [1, 5, 6, 7, 4]
+
+const filteredArray = numbers.filter(element => element > 4)
+
+console.log(filteredArray)  // output: [ 5, 6, 7 ]
+```
+
+### Scroll to top `button`
+
+```js
+const button  = document.querySelector('button')
+
+button.addEventListener('click', function () {
+  window.scrollTo(0,0)
+})
+
+```
+
+![scrolling from bottom to top of the page on clicking button move to top gif](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tthn8l66dfic4i0m1zdq.gif)
+
+Happy Coding 😊

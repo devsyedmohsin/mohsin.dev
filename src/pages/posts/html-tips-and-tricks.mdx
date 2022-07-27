@@ -1,0 +1,193 @@
+---
+title: HTML tips and tricks.
+date: Posted on Feb 28, 2021
+description: This post covers HTML tips and tricks you may need to know.
+---
+
+# HTML tips and tricks.
+
+In my very last [article](https://dev.to/devsyedmohsin/javascript-tips-and-tricks-2mhk) I shared some JavaScript tips and tricks In this article I will be covering HTML tips and tricks ✨.
+
+###  The `start attribute`
+
+Start attribute allows you to specify starting number for your list items.
+
+```html
+ <ol start="20">
+       <li>Pineapple🍍</li>
+       <li>Apple🍎</li>
+       <li>Greenapple 🍏</li>
+ </ol>
+```
+
+![3 items of fruits starting from 20 20 is specified using the start attribute3 items of fruits](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ik05u8a96h506u314ubm.png)
+
+
+### The `contenteditable attribute`
+
+Set contenteditable attribute to true and your content will be editable.
+
+```html
+ <p contenteditable="true">It Can be something about you.</p> 
+```
+
+![illustration of editable paragraph achived using contenteditable attribute](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3j7fbm6l7mjuy552immb.gif)
+
+
+### The `required attribute`
+
+Set required attribute on input fields that are mandatory to be filled.
+
+```html
+<input type="password" required>
+```
+### The `mark tag`
+
+Use mark instead of styling spans to highlight text.
+
+```html
+ <p>This is <mark>important</mark> </p>
+```
+
+
+![highlighted text achieved with mark tag](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1tpq69elepymsveoi4dd.png)
+
+
+### The `lazy loading attribute`
+
+Add lazy loading attribute on media elements this will enhance page performance by defer the loading of media elements until the user scrolls to them.
+
+```html
+<img src='image.jpg' loading='lazy' alt='Alternative text'>
+```
+
+### The `kbd tag`
+
+Use kbd tag when presenting keyboard inputs.
+
+```html
+<p>Press <kbd>alt</kbd> & <kbd>tab</kbd> to change window</p>
+```
+
+![illustration for kbd tag](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/t9fd85bnbgban8o9mevr.png)
+
+### The `Details & Summary tag`
+
+You can craft nice looking accordions using details and summary elements this has built built in keyboard accessibility features.
+
+```html
+   <details>
+      <summary>Can i save and love ❤️ this article?</summary>
+      <p>Follow on twitter for more stuff.</p>
+      <p>Save for updates.</p>
+  </details>
+```
+
+![accordion with question and answer](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xpfv1roxs2nmtky2z2y2.gif)
+
+### The `accept attribute`
+
+Accept attributes allows us to specify which types of files user can upload.
+
+```html
+<input type="file" accept=".jpg, .pdf">
+```
+
+
+### The `favicon`
+
+Set link rel to icon to define favicon
+
+```html
+<link rel="icon" href="logo.webp">
+```
+
+### The `picture tag`
+
+Picture tag allows you to present images of different aspect ratios based on screen sizes picture tag is awesome for implementing reponsive web design.
+
+```html
+<picture>
+    <source srcset="large.webp" media="(min-width: 1200px)">
+    <source srcset="medium.webp" media="(min-width: 800px)">
+    <img src="regular.jpg" />
+</picture>
+```
+
+### The `dir attribute`
+
+You can set your text direction from right to left or left to right using direction set dir to auto this will automatically change text direction based on language.
+
+```html
+<p dir="rtl">Awesome!</p>
+```
+
+![some text written from right to left](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8xqj9458bt06qlh2uoez.png)
+
+### The `spellcheck attribute`
+
+Use spellcheck attribute to check for spelling errors.
+```html
+<input type="email" spellcheck="true">
+```
+
+### The `meta description`
+
+Add meta descriptions in the head of your Html to have an indirect impact on search engine optimization meta description represents the text that appears beneath the site name on search engine result page.
+
+```html
+<meta name="description" content="Gitpod streamlines developer workflows by providing prebuilt, collaborative developer environments in your browser - powered by VS Code.">
+```
+
+![Gitpod.io url with output of meta description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zr5wfg018xoq6ficpods.png)
+
+
+## The `abbr tag`
+
+Abbreviate your content using abbr tag.
+
+```html
+<abbr title="National Aeronautics and Space Administration">NASA 🚀</abbr>
+```
+
+![Abbreviation of word showing on hover over the word](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rijw1j8bfzcyifage0he.gif)
+
+
+### The `disabled attribute`
+
+Use disabled attribute for options element to disable a item from dropdown.
+
+```html
+ <select>
+   <option>HTML</option>
+   <option>CSS</option>
+   <option disabled>REACT</option>
+ </select>
+```
+![Unable to select a option from list because of disabled attribute](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rmwtqra8uzbcurkfjznz.gif)
+
+### The `poster attribute`
+
+Poster attributes allows you to specify a image to be displayed while the video is downloading or until the user hits the play button.
+
+```html
+<video src="video.mp4" poster="flowers.jpg"></video>
+```
+
+### The `reversed attribute`
+
+Using reversed attribute you can reverse the order of list numbers.
+
+```html
+  <ol reversed>
+        <li>Pineapple🍍</li>
+        <li>Apple🍎</li>
+        <li>Greenapple 🍏</li>
+  </ol>
+```
+
+![list numbers starting in reversed order starting from 3 and ending at 1 instead of 1 to 3](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pk5mrp4qg0ahv8l448qx.png)
+
+Hope you enjoyed reading this article! if you have something to say or have any questions feel 💯 free to comment below.
+
+Happy Coding ✨❤️

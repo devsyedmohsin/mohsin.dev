@@ -1,0 +1,17 @@
+.btn-to-top {
+    position: fixed;
+    top: 90%;
+    right: var(--gutter-normal);
+    background-color: var(--color-brand);
+    padding: var(--micro);
+    -webkit-border-radius: var(--gutter-x-small);
+    -moz-border-radius: var(--gutter-x-small);
+    -ms-border-radius: var(--gutter-x-small);
+    -o-border-radius: var(--gutter-x-small);
+    border-radius: var(--gutter-x-small);
+
+    img {
+        width: var(--gutter-normal);
+    }
+
+}
