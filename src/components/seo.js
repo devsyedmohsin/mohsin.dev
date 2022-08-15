@@ -24,6 +24,10 @@ const Seo = (props) => {
   const description = props.description || defaults.description
   const url = props.siteUrl || defaults.siteUrl
 
+  // To improve accessibility
+
+  document.querySelector('html').setAttribute('lang','en')
+
   return (
     <Helmet>
       <title>{title}</title>
