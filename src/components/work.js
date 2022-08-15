@@ -21,9 +21,9 @@ const Work = () => (
                 <StaticImage className="work__img" src="../images/work/gitpod.png" alt="gitpod website home page" placeholder="blurred" />
             </WorkInstance>
             
-            {/* <WorkInstance title={'fylo page'} text='Fylo allows you to store all your files in one secure location.' link={'https://fylodrive.netlify.app/'} >
+            <WorkInstance title={'fylo page'} text='Fylo allows you to store all your files in one secure location.' link={'https://fylodrive.netlify.app/'} >
                 <StaticImage className="work__img" src="../images/work/fylo.png" alt="fylo landing page" placeholder="blurred" />
-            </WorkInstance> */}
+            </WorkInstance>
 
             <WorkInstance title={'indecision app'} text='Put your life in the hands of a computer.' link={'https://indecisionclone.netlify.app/'} >
                 <StaticImage className="work__img" src="../images/work/indecision-app.png" alt="indecision app" placeholder="blurred" />

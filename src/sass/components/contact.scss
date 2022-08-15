@@ -1,5 +1,5 @@
 .contact {
-    max-width: 600px;
+    max-width: 590px;
     background-color: var(--color-brand);
     padding: var(--gutter-medium);
     -webkit-border-radius: var(--gutter-x-small);
@@ -19,6 +19,7 @@
 
     &__text {
         padding: var(--gutter-x-small) 0;
+        margin-bottom: var(--gutter-x-small);
     }
 
     &__btn {
