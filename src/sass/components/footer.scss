@@ -1,18 +1,15 @@
 .footer {
     padding: var(--gutter-large) 0;
     margin-top: var(--gutter-large);
-    border-top: 1px solid lighten(#c2bfbf, 4%);
+    border-top: 1px solid lighten(#3f3e3e25, 4%);
     text-align: center;
 
     &__links {
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: var(--gutter-medium);
         margin-bottom: var(--gutter-medium);
-    }
-
-    &__link:not(:last-child) {
-        margin-right: var(--gutter-medium);
     }
 
     &__link>img {
