@@ -19,18 +19,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: var(--gutter-huge);
+    margin-top: var(--gutter-x-huge);
 
     @media (max-width:975px) {
         flex-direction: column-reverse;
         align-items: flex-start;
         justify-content: center;
-        margin-top: var(--gutter-x-large);
         gap: var(--gutter-small);
     }
 
-    @media (max-width:745px) {
-        margin: var(--gutter-large) 0;
+    @media (max-width:315px) {
+        margin-top: var(--gutter-x-large);
     }
 
     &__text {

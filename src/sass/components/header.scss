@@ -1,5 +1,5 @@
 .header {
-  min-height: 80vh;
+  min-height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,7 +60,7 @@
     }
 
     @media (max-width:575px) {
-      max-width: 275px;
+      max-width: 345px;
     }
 
   }
