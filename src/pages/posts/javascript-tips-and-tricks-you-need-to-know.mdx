@@ -1,0 +1,217 @@
+---
+title: JavaScript tips and tricks you need to know 💯️🚀️
+date: Posted on September 8, 2022
+description: In this article we will look at some useful JavaScript tips and tricks.
+---
+
+In this article we will look at some useful JavaScript tips and tricks.
+
+## location.reload()
+
+This reloads the current document and works same as the reload button in your browser.This can be really handy when implementing a refresh button in the user interfaces.
+
+```js
+const btnRefresh = document.querySelector("button");
+
+btnRefresh.addEventListener("click", () => {
+  location.reload();
+});
+```
+
+## JavaScript styles
+
+CSS styles applied using javascript are applied as inline styles.
+
+```html
+<h1>Cakes & Bakes 🧁</h1>
+```
+
+```js
+document.querySelector('h1').style.color = "coral"
+
+<h1 style="color: coral;">  // HTML Element
+```
+
+## Type coercion
+
+Implicit conversion of values from one data type to another data type is named as type coercion i.e `strings to numbers`.
+
+In case of plus operator values are concatenated and converted into strings.
+
+```js
+console.log("2" * 10); // output: 20
+console.log(10 - "2"); // output: 8
+console.log(2 + "2"); // output: '22'
+```
+
+## Active element
+
+if you are having hard time figuring out which element is currently being focused use `document.activeElement` it returns the current focused element.
+
+```js
+console.log(document.activeElement);
+```
+
+## Primitives
+
+In JavaScript there are seven primitive data types.
+
+```js
+number, string, boolean, undefined, null, BigInt, Symbol;
+```
+
+## Remainder operator
+
+Remainder operator `%` simply returns the remainder of a division i.e `5 % 2 = 1`.You can use remainder operator to check either a number is even or odd
+
+```js
+const number = 10;
+
+console.log(number % 2 === 0 ? "Even ❤️" : "Odd 🧡");
+
+// output: Even ❤️
+```
+
+## Design mode
+
+Set document.designMode to on to make your webpage content editable.
+
+```js
+document.designMode = "on";
+```
+
+## Contains method
+
+To check either a HTML element contains a specific class or not.
+
+```html
+<h1 class="title">Page title</h1>
+```
+
+```js
+document.querySelector("h1").classList.contains("title");
+document.querySelector("h1").classList.contains("subtitle");
+
+// output: true
+// output: false
+```
+
+## Var hoisting
+
+Variables declared with var are hoisted but returns `undefined.`
+
+```js
+console.log(a);
+var a = 10;
+
+// output: undefined
+```
+
+## Remove method
+
+Remove methods allows you to remove an HTML from the document.
+
+```html
+<h1>Page title ⚙️</h1>
+```
+
+```js
+const pageTitle = document.querySelector("h1");
+pageTitle.remove();
+```
+
+## Eval method
+
+Eval is a builtin Javascript function which allows you to evaluate the given values i.e `strings, numbers.`This can be used to build a simple calculator like [this](https://totaliser.netlify.app/).
+
+```js
+eval(2 * "5");
+// output: 10
+
+eval(12 / "2");
+// output: 6
+```
+
+## Typeof operator
+
+The typeof operator allows you to check type of a value.
+
+```js
+console.log(typeof 42);
+// output: "number"
+
+console.log(typeof "markdown ⚡");
+// output: "string"
+
+console.log(typeof true);
+// output: "boolean"
+```
+
+## Replace method
+
+The replace method allows you to replace the very first instance of a string entity with the specified entity likewise replace we also have replaceAll that replaces all the instances.
+
+```js
+const string = "cake";
+string.replace("c", "b");
+
+// output: 'bake'
+```
+
+## Includes method
+
+To check either a string or array contains a specific value or not. The method returns a boolean.
+
+```js
+const string = "JavaScript";
+
+string.includes("J"); // output: true
+
+const hearts = ["🧡", "💙", "🤍"];
+
+console.log(hearts.includes("🧡")); // output: true
+
+console.log(hearts.includes("❤️")); // output: false
+```
+
+## Document url
+
+The document.URL returns the document URL/location as a string.
+
+```js
+console.log(document.URL);
+
+// output: "https://developer.mozilla.org/en-US/"
+```
+
+## Strings index
+
+Likewise arrays string indexes also start with 0.
+
+```js
+let string = "cake";
+
+string[0]; // output: 'c'
+
+string[1]; // output: 'a'
+```
+
+## Default parameters
+
+Set default parameters for functions using assignment operator in case no argument is passed the function will return the default values.
+
+I wrote this [article](https://dev.to/devsyedmohsin/javascript-default-function-parameters-1i8j) to cover this topic in detail.
+
+```js
+function printName(name = "Anonymous") {
+  console.log(name);
+}
+
+printName(); // output: "Anonymous"
+```
+
+Hope you enjoyed reading this article ❤️ Next up I will be building an open source portfolio template that anyone can use for free 🎉.
+
+I’m officially looking for a junior/entry-level front-end developer position. Please feel free to drop a comment below if you’re hiring, or to share opportunities. [My portfolio](https://mohsin-dev.vercel.app/).
+
+Thanks and Happy coding!
